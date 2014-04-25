@@ -1644,7 +1644,9 @@
 	<label2>31003</label2>
 	<property name="id">movies</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],movies)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,movietitles,return))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,movietitles,return))</onclick>
+    <onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.movies.0.path)])</onclick>
+    
     <include>DefaultReset</include>
 	</item>
 	<item>
@@ -1652,7 +1654,9 @@
 	<label2>$LOCALIZE[31003]-$LOCALIZE[31583]</label2>
 	<property name="id">movies</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],movierecently)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,recentlyaddedmovies,return))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,recentlyaddedmovies,return))</onclick>
+	<onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)])</onclick>
+	
 	<include>DefaultReset</include>
 	</item>
 	<item>
@@ -1660,7 +1664,9 @@
 	<label2>$LOCALIZE[31003]-$LOCALIZE[31029]</label2>
 	<property name="id">movies</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],moviesets)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,moviesets,return))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,moviesets,return))</onclick>
+	<onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.movies.4.path)])</onclick>
+	
 	<include>DefaultReset</include>
 	</item>
 	<item>
@@ -1732,7 +1738,9 @@
 	<label2>31005</label2>
 	<property name="id">tvshows</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],tvshows)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,tvshowtitles,return))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,tvshowtitles,return))</onclick>
+	<onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)])</onclick>
+	
 	<include>DefaultReset</include>
 	</item>
 	<item>
@@ -1740,7 +1748,9 @@
 	<label2>$LOCALIZE[31527]-$LOCALIZE[31583]</label2>
 	<property name="id">tvshows</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],tvshowrecently)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,recentlyaddedepisodes,return))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,recentlyaddedepisodes,return))</onclick>
+	<onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.tvshows.1.path)])</onclick>
+	
 	<include>DefaultReset</include>
 	</item>
 	<item>
@@ -1748,7 +1758,9 @@
 	<label2>31067</label2>
 	<property name="id">tvshows</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],tvguide)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],RunScript(script.tv.show.next.aired))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],RunScript(script.tv.show.next.aired))</onclick>
+	<onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.tvshows.5.path)])</onclick>
+	
 	<include>DefaultReset</include>
 	</item>
 	<item>
@@ -1788,7 +1800,9 @@
 	<label2>31013</label2>
 	<property name="id">concerts</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],concerts)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,musicvideotitles,return))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,musicvideotitles,return))</onclick>
+	<onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.music.3.path)])</onclick>
+	
 	<include>DefaultReset</include>
 	</item>
 	<item>
@@ -1852,7 +1866,9 @@
 	<label2>31002</label2>
 	<property name="id">music</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],music)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(music))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(music))</onclick>
+	<onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.music.0.path)])</onclick>
+	
 	<include>DefaultReset</include>
 	</item>
 	<item>
@@ -1868,7 +1884,9 @@
 	<label2>$LOCALIZE[31002]-$LOCALIZE[31583]</label2>
 	<property name="id">music</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],musicrecently)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(musiclibrary,recentlyaddedalbums,return))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(musiclibrary,recentlyaddedalbums,return))</onclick>
+	<onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.music.2.path)])</onclick>
+	
 	<include>DefaultReset</include>
 	</item>
 	<item>
@@ -2058,7 +2076,9 @@
 	<label2>31008</label2>
 	<property name="id">various</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],pictures)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(pictures))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(pictures))</onclick>
+	<onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.photo.0.path)])</onclick>
+	
 	<include>DefaultReset</include>
 	</item>
 	<item>
@@ -2066,7 +2086,9 @@
 	<label2>31746</label2>
 	<property name="id">various</property>
 	<onclick>Skin.SetString($INFO[skin.string(custom_master)],globalsearch)</onclick>
-	<onclick>Skin.SetString($INFO[skin.string(custom_action)],RunScript(script.globalsearch))</onclick>
+	<onclick condition="!Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],RunScript(script.globalsearch))</onclick>
+	<onclick condition="Skin.HasSetting(xbmb3c)">Skin.SetString($INFO[skin.string(custom_action)],$INFO[Window(Home).Property(xbmb3c.std.search.0.path)])</onclick>
+	
 	<include>DefaultReset</include>
 	<visible>Skin.HasSetting(submode)</visible>
 	</item>
@@ -4620,7 +4642,9 @@
 	<label>$VAR[value_addon4]</label>
 	<onclick condition="!System.HasAddon(script.artworkorganizer)">ActivateWindow(Programs,Addons,return)</onclick>
 	<onclick condition="System.HasAddon(script.artworkorganizer)">RunScript(script.artworkorganizer)</onclick>
+	<visible>!Skin.HasSetting(xbmb3c)</visible>
 	<visible>StringCompare(Container(9000).ListItem.Property(id),movies) + Skin.HasSetting(randommoviebg) | StringCompare(Container(9000).ListItem.Property(id),tvshows) + Skin.HasSetting(randomtvshowbg) | StringCompare(Container(9000).ListItem.Property(id),concerts) + Skin.HasSetting(randomconcertbg) | StringCompare(Container(9000).ListItem.Property(id),music) + Skin.HasSetting(randommusicbg)</visible>
+	
 	</control>
 	<control type="button" id="127"><!-- Pacote extra normal -->
 	<label>$VAR[value_addon14]</label>

@@ -4204,6 +4204,10 @@ msgctxt "#31992"
 msgid "Local subtitle available"
 msgstr "Local subtitle available"
 
+msgctxt "#31993"
+msgid "NEXT UP"
+msgstr "NEXT UP"
+
 msgctxt "#31999"
 msgid ""
 "The Original Aeon Skin and its name are intelectual property of djh_. The "
