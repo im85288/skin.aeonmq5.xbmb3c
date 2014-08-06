@@ -30,16 +30,23 @@
 	<control type="multiimage" id="5020"><!-- Extra Fanart Movies/TvShows/MusicVideos/Sets -->
 	<include>InvisibleButton</include>
 	<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-	<visible>Container.Content(movies) + !Skin.HasSetting(trailers) + SubString(skin.string(moviesfanart),extra) | Container.Content(tvshows) + SubString(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + SubString(skin.string(musicvideosfanart),extra) | Container.Content(sets) + SubString(skin.string(setsfanart),extra)</visible>
+	<visible>!Skin.HasSetting(xbmb3c) + Container.Content(movies) + !Skin.HasSetting(trailers) + SubString(skin.string(moviesfanart),extra) | Container.Content(tvshows) + SubString(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + SubString(skin.string(musicvideosfanart),extra) | Container.Content(sets) + SubString(skin.string(setsfanart),extra)</visible>
+	</control>
+	<control type="multiimage" id="5020"><!-- Extra Fanart Movies/TvShows/MusicVideos/Sets -->
+	<include>InvisibleButton</include>
+	<imagepath background="true">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</imagepath>
+	<visible>Skin.HasSetting(xbmb3c) + Container.Content(movies) + SubString(skin.string(moviesfanart),extra) | Container.Content(tvshows) + SubString(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + SubString(skin.string(musicvideosfanart),extra) | Container.Content(sets) + SubString(skin.string(setsfanart),extra) | Container.Content(music)</visible>
 	</control>
 	<control type="multiimage" id="5021"><!-- Extra Fanart Seasons -->
 	<include>InvisibleButton</include>
 	<imagepath background="true">$INFO[ListItem.Path,,extrafanart/]</imagepath>
+	<visible>!Skin.HasSetting(xbmb3c)</visible>
 	<visible>Container.Content(seasons) + SubString(skin.string(seasonsfanart),extra)</visible>
 	</control>
 	<control type="multiimage" id="5022"><!-- Extra Fanart Episodes -->
 	<include>InvisibleButton</include>
 	<imagepath background="true">$INFO[ListItem.Path,,../extrafanart/]</imagepath>
+	<visible>!Skin.HasSetting(xbmb3c)</visible>
 	<visible>Container.Content(episodes) + SubString(skin.string(episodesfanart),extra)</visible>
 	</control>
 	<control type="image" id="5023"><!-- Season Fanart -->

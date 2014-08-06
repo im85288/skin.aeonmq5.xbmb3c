@@ -634,6 +634,7 @@
 				<onfocus>Skin.SetBool(visanimation_panscan)</onfocus>
 				<onfocus>Skin.SetBool(darkbar)</onfocus>
 				<onfocus>Skin.SetBool(ontvtunes)</onfocus>
+				<onfocus>Skin.SetBool(xbmb3c)</onfocus>
 				<onfocus>AlarmClock(nextstep,SetFocus(901),0:03,true)</onfocus>
 			</control>
 			<control type="button" id="901">

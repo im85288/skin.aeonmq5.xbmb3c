@@ -1,0 +1,21 @@
+﻿<views>
+    <view id="List" value="50" />
+    <view id="Wide" value="51" />
+    <view id="Banner" value="52" />
+    <view id="BannerInfo" value="53" />
+    <view id="Poster" value="54" />
+    <view id="Low List" value="55" />
+    <view id="Wall" value="56" />
+    <view id="Glass List" value="57" />    
+    <view id="Coverflow" value="58" />
+    <view id="Right List" value="59" />
+    <view id="Show Art" value="60" />
+    <view id="MultiPlex" value="61" />
+    <view id="Panel" value="62" />
+    <view id="Lovefilm" value="63" />
+    <view id="LandScapeX" value="64" />
+    <view id="Sets" value="65" />
+    <view id="Show Case" value="66" />    
+    <view id="3D Wall" value="67" />
+    <view id="BannerList" value="68" />
+</views>
